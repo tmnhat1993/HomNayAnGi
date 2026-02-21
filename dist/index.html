@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hôm Nay Ăn Gì? 🍜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-Dj9p8EuM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DkgS7ZlH.css">
+</head>
+<body>
+  <!-- Background canvas for particles -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- App container -->
+  <div id="app">
+
+    <!-- IDLE SCREEN -->
+    <div id="screen-idle" class="screen active">
+      <div class="idle-content">
+        <div class="title-area">
+          <p class="subtitle">✨ Đừng nghĩ nữa, để số phận quyết định ✨</p>
+          <h1 class="main-title">
+            <span class="t1">HÔM</span>
+            <span class="t2">NAY</span>
+            <span class="t3">ĂN</span>
+            <span class="t4">GÌ?</span>
+          </h1>
+        </div>
+
+        <div class="deck-area" id="deckArea">
+          <div class="deck-wrapper">
+            <div class="card-back c5"></div>
+            <div class="card-back c4"></div>
+            <div class="card-back c3"></div>
+            <div class="card-back c2"></div>
+            <div class="card-back c1"></div>
+          </div>
+          <div class="deck-glow"></div>
+        </div>
+
+        <button class="cta-btn" id="ctaBtn">
+          <span class="cta-icon">🎴</span>
+          <span class="cta-text">RÚT BÀI NGAY!</span>
+          <span class="cta-sub">52 món ăn đang chờ bạn</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- DRAWING SCREEN -->
+    <div id="screen-drawing" class="screen">
+      <canvas id="drawingCanvas"></canvas>
+      <div class="drawing-overlay">
+        <div class="drawing-text" id="drawingText">Đang xáo bài...</div>
+        <div class="drawing-countdown" id="drawingCountdown"></div>
+      </div>
+    </div>
+
+    <!-- REVEAL SCREEN -->
+    <div id="screen-reveal" class="screen">
+      <canvas id="revealCanvas"></canvas>
+      <div class="reveal-content">
+        <div class="reveal-label" id="revealLabel">Hôm nay bạn sẽ ăn...</div>
+        <div class="revealed-card" id="revealedCard">
+          <div class="card-inner" id="cardInner">
+            <div class="card-face card-front" id="cardFront">
+              <div class="card-rank-top" id="rankTop"></div>
+              <div class="card-suit-top" id="suitTop"></div>
+              <div class="card-center-food" id="foodIcon"></div>
+              <div class="card-food-name" id="foodName"></div>
+              <div class="card-food-desc" id="foodDesc"></div>
+              <div class="card-rank-bot" id="rankBot"></div>
+              <div class="card-suit-bot" id="suitBot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="power-bar" id="powerBar">
+          <span class="power-label">Sức mạnh:</span>
+          <span class="power-stars" id="powerStars"></span>
+        </div>
+        <div class="reveal-buttons">
+          <button class="btn-retry" id="btnRetry">🔄 Rút Lại</button>
+          <button class="btn-share" id="btnShare">📤 Chia Sẻ</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts (ES6 module bundle) -->
+</body>
+</html>
